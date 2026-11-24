@@ -21,6 +21,7 @@ import type {
 } from './types/clinic';
 import {
   CLINIC_SHORT_NAME,
+  CLINIC_WHATSAPP_DISPLAY,
   createServiceRecordFromBooking,
   formatDatePtBr,
   getCategoryLabel,
@@ -231,8 +232,8 @@ export default function App() {
             ? `Reagendamento confirmado · ${booking.petName}`
             : `${booking.service} confirmado · ${booking.petName}`,
           isReschedule
-            ? `REAGENDAMENTO de ${booking.service} (${getCategoryLabel(booking.category)}) para ${formatDatePtBr(booking.date)} (${booking.shift.split(' ')[0]}). Envie pelo WhatsApp (64) 3651-2388 para confirmar o novo horário.`
-            : `${getCategoryLabel(booking.category)} para ${formatDatePtBr(booking.date)} (${booking.shift.split(' ')[0]}). Envie os dados ao WhatsApp (64) 3651-2388 para finalizar o horário.`,
+            ? `REAGENDAMENTO de ${booking.service} (${getCategoryLabel(booking.category)}) para ${formatDatePtBr(booking.date)} (${booking.shift.split(' ')[0]}). Envie pelo WhatsApp ${CLINIC_WHATSAPP_DISPLAY} para confirmar o novo horário.`
+            : `${getCategoryLabel(booking.category)} para ${formatDatePtBr(booking.date)} (${booking.shift.split(' ')[0]}). Envie os dados ao WhatsApp ${CLINIC_WHATSAPP_DISPLAY} para finalizar o horário.`,
           booking.category,
           true
         );

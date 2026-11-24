@@ -9,6 +9,7 @@ import {
 import {
   CLINIC_NAME,
   CLINIC_PHONE_DISPLAY,
+  CLINIC_WHATSAPP_NUMBER,
 } from '../utils/clinicLogic';
 
 const HERO_LOGO_URL = 'https://i.postimg.cc/pXKP6TGd/LOGO-ANIMAL-PET-ORIGINAL.png';
@@ -112,7 +113,9 @@ export function HeroSection({
                 <div>
                   <p className="text-xs font-bold text-[#141414]">WhatsApp Direto</p>
                   <a
-                    href="tel:+556436512388"
+                    href={`https://wa.me/${CLINIC_WHATSAPP_NUMBER}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[11px] font-bold text-[#8C700B] hover:underline tabular-nums"
                   >
                     {CLINIC_PHONE_DISPLAY}

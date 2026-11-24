@@ -33,7 +33,7 @@ const TRUST_HIGHLIGHTS = [
   {
     icon: PhoneCall,
     title: 'Atendimento Ágil',
-    subtitle: `WhatsApp e fixo ${CLINIC_PHONE_DISPLAY}`,
+    subtitle: `WhatsApp ${CLINIC_PHONE_DISPLAY}`,
   },
 ];
 

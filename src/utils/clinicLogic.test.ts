@@ -60,7 +60,7 @@ test('validateBookingInput rejects mismatched service for petshop category', () 
   assert.ok(errors.service);
 });
 
-test('buildWhatsAppBookingMessage and URL target (64) 3651-2388 with structured data', () => {
+test('buildWhatsAppBookingMessage and URL target (64) 98433-3311 with structured data', () => {
   const message = buildWhatsAppBookingMessage(validBooking);
   assert.match(message, /Atendimento Veterinário/);
   assert.match(message, /Vacinação/);
@@ -69,13 +69,13 @@ test('buildWhatsAppBookingMessage and URL target (64) 3651-2388 with structured 
   assert.match(message, /Av\. Santos Dumont, 92/);
 
   const url = buildWhatsAppUrl(validBooking);
-  assert.ok(url.startsWith('https://wa.me/556436512388?text='));
+  assert.ok(url.startsWith('https://wa.me/5564984333311?text='));
   assert.ok(url.includes(encodeURIComponent('Thor')));
 });
 
 test('formatPhoneMask and formatDatePtBr format Brazilian values accurately', () => {
   assert.equal(formatPhoneMask('6436512388'), '(64) 3651-2388');
-  assert.equal(formatPhoneMask('64999112233'), '(64) 99911-2233');
+  assert.equal(formatPhoneMask('64984333311'), '(64) 98433-3311');
   assert.equal(formatDatePtBr('2026-12-05'), '05/12/2026');
 });
 
@@ -177,7 +177,7 @@ test('buildWhatsAppBookingMessage and record creation emphasize REAGENDAMENTO wh
   assert.match(message, /Vacinação/);
 
   const url = buildWhatsAppUrl(rescheduleBooking);
-  assert.ok(url.startsWith('https://wa.me/556436512388?text='));
+  assert.ok(url.startsWith('https://wa.me/5564984333311?text='));
   assert.ok(url.includes(encodeURIComponent('REAGENDAMENTO')));
 
   const record = createServiceRecordFromBooking(

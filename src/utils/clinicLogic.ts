@@ -10,8 +10,11 @@ import type {
 
 export const CLINIC_NAME = 'Império Animal Pet Shop - Consultório Veterinário';
 export const CLINIC_SHORT_NAME = 'Império Animal';
-export const CLINIC_PHONE_DISPLAY = '(64) 3651-2388';
-export const CLINIC_WHATSAPP_NUMBER = '556436512388';
+export const CLINIC_WHATSAPP_DISPLAY = '(64) 98433-3311';
+export const CLINIC_WHATSAPP_NUMBER = '5564984333311';
+export const CLINIC_LANDLINE_DISPLAY = '(64) 3651-2388';
+export const CLINIC_LANDLINE_NUMBER = '556436512388';
+export const CLINIC_PHONE_DISPLAY = CLINIC_WHATSAPP_DISPLAY;
 export const CLINIC_ADDRESS = 'Av. Santos Dumont, 92 - Centro, Quirinópolis - GO';
 export const CLINIC_HOURS = 'Segunda a Sexta: 08h às 18h · Sábado: 08h às 13h';
 

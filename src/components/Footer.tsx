@@ -125,7 +125,10 @@ export function Footer() {
             <p className="font-display text-sm font-bold text-[#DBBD43]">Unidade Quirinópolis</p>
             <p className="text-sm text-[#CFCAC0]">{CLINIC_ADDRESS}</p>
             <p className="text-sm tabular-nums font-semibold text-white">
-              Tel. / WhatsApp: {CLINIC_PHONE_DISPLAY}
+              WhatsApp: {CLINIC_PHONE_DISPLAY}
+            </p>
+            <p className="text-xs tabular-nums text-[#CFCAC0]">
+              Telefone Fixo: (64) 3651-2388
             </p>
           </div>
         </div>

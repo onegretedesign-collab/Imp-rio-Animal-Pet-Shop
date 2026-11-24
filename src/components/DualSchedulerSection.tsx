@@ -20,7 +20,10 @@ import type {
   ServiceHistoryRecord,
 } from '../types/clinic';
 import {
+  CLINIC_LANDLINE_DISPLAY,
+  CLINIC_LANDLINE_NUMBER,
   CLINIC_PHONE_DISPLAY,
+  CLINIC_WHATSAPP_NUMBER,
   buildWhatsAppBookingMessage,
   buildWhatsAppUrl,
   formatDatePtBr,
@@ -704,12 +707,21 @@ export function DualSchedulerSection({
                 <div className="pt-4 border-t border-[#E8E1C8] flex items-start gap-3">
                   <BellRing className="w-5 h-5 text-[#B5941D] shrink-0 mt-0.5" aria-hidden="true" />
                   <p className="text-xs text-[#555147] leading-relaxed">
-                    Para urgências clínicas durante o expediente, ligue diretamente para{' '}
+                    Envio direto dos agendamentos para o WhatsApp{' '}
                     <a
-                      href="tel:+556436512388"
+                      href={`https://wa.me/${CLINIC_WHATSAPP_NUMBER}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="tabular-nums font-bold text-[#141414] underline decoration-[#DBBD43] decoration-2"
                     >
                       {CLINIC_PHONE_DISPLAY}
+                    </a>{' '}
+                    ou atendimento telefônico no fixo{' '}
+                    <a
+                      href={`tel:+${CLINIC_LANDLINE_NUMBER}`}
+                      className="tabular-nums font-bold text-[#141414] underline decoration-[#DBBD43] decoration-2"
+                    >
+                      {CLINIC_LANDLINE_DISPLAY}
                     </a>
                     .
                   </p>

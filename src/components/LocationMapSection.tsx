@@ -237,17 +237,27 @@ export function LocationMapSection() {
                 </p>
               </div>
 
-              <div className="border-t border-[#E8E1C8] pt-5">
-                <p className="text-xs font-bold text-[#8C700B] mb-1">
-                  Telefone Fixo e WhatsApp
+              <div className="border-t border-[#E8E1C8] pt-5 space-y-2.5">
+                <p className="text-xs font-bold text-[#8C700B]">
+                  WhatsApp de Agendamentos e Telefone Fixo
                 </p>
-                <a
-                  href={`tel:+${CLINIC_WHATSAPP_NUMBER}`}
-                  className="text-xl tabular-nums font-bold text-[#141414] hover:text-[#8C700B] transition-colors inline-flex items-center gap-2.5"
-                >
-                  <Phone className="w-5 h-5 text-[#B5941D] shrink-0" aria-hidden="true" />
-                  {CLINIC_PHONE_DISPLAY}
-                </a>
+                <div className="flex flex-col gap-1.5">
+                  <a
+                    href={`https://wa.me/${CLINIC_WHATSAPP_NUMBER}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl tabular-nums font-bold text-[#141414] hover:text-[#8C700B] transition-colors inline-flex items-center gap-2.5"
+                  >
+                    <Phone className="w-5 h-5 text-[#B5941D] shrink-0" aria-hidden="true" />
+                    <span>{CLINIC_PHONE_DISPLAY} (WhatsApp)</span>
+                  </a>
+                  <a
+                    href="tel:+556436512388"
+                    className="text-sm tabular-nums font-semibold text-[#555147] hover:text-[#141414] transition-colors pl-7"
+                  >
+                    Fixo da unidade: (64) 3651-2388
+                  </a>
+                </div>
               </div>
 
               <div className="border-t border-[#E8E1C8] pt-5">
