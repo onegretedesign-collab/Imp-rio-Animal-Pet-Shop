@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-yellow: #DBBD43;
+  --color-brand-yellow-avg: #D7B841;
+  --color-brand-yellow-hover: #C6A832;
+  --color-brand-yellow-soft: #FAF4D9;
+  --color-brand-gold-ink: #8C700B;
+  --color-brand-black: #141414;
+  --color-brand-black-deep: #0D0D0C;
+  --color-brand-charcoal: #262520;
+  --color-ink-muted: #555147;
+  --color-canvas: #FFFDF7;
+  --color-canvas-alt: #F6F2E4;
+  --color-card-border: #E8E1C8;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-brand-black);
+    background-color: var(--color-canvas);
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 16mm 14mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    font-size: 11pt;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide site chrome, floating widgets, and non-history landing sections */
+  header,
+  footer,
+  #inicio,
+  #especialidades,
+  #agendamento,
+  #diferenciais,
+  #avaliacoes,
+  #localizacao,
+  [data-print-hide="true"] {
+    display: none !important;
+  }
+
+  /* Reset outer wrapper spacing so history prints edge-to-edge within @page margins */
+  main {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #historico {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #historico .print-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #historico .print-grid {
+    display: block !important;
+  }
+
+  #historico .print-sheet {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  [data-print-record="true"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 12pt 0 !important;
+    border-color: #d6ddd0 !important;
+  }
+
+  [data-print-only="true"] {
+    display: block !important;
+  }
+
+  a {
+    color: #1f2937 !important;
+    text-decoration: none !important;
+  }
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Império Animal Pet Shop - Consultório Veterinário",
+  "description": "Site institucional e agendamento online para consultas veterinárias, vacinação, farmácia pet e estética animal em Quirinópolis - GO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
